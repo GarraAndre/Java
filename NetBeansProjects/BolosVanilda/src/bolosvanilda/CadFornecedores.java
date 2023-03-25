@@ -148,13 +148,13 @@ public class CadFornecedores extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-        jButton1.setText("Novo");
+        jButton1.setText("Pesquisar");
 
         jButton2.setText("Alterar");
 
-        jButton3.setText("Cadastrar");
+        jButton3.setText("Gravar");
 
-        jButton4.setText("Excluir");
+        jButton4.setText("Cancelar");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -193,9 +193,9 @@ public class CadFornecedores extends javax.swing.JFrame {
                                 .addComponent(jButton2)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButton3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(jButton4)))
-                        .addGap(0, 48, Short.MAX_VALUE))
+                        .addGap(0, 38, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(EndFor)
