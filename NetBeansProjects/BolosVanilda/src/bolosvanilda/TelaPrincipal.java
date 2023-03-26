@@ -94,6 +94,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bolosvanilda/Imagens/Relatorios.png"))); // NOI18N
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bolosvanilda/Imagens/Sair_1.png"))); // NOI18N
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
 
         jLabel16.setText("Fornecedores");
 
@@ -221,6 +226,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         frame.setVisible(true);
         
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        dispose();
+    }//GEN-LAST:event_jLabel10MouseClicked
 
     /**
      * @param args the command line arguments
