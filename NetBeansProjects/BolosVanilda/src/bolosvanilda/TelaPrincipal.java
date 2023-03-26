@@ -54,16 +54,36 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setBackground(new java.awt.Color(51, 102, 255));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bolosvanilda/Imagens/Clientes.png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
 
         jLabel6.setText("Clientes");
 
         jLabel8.setText("Vendas");
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bolosvanilda/Imagens/Fornecedores.png"))); // NOI18N
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel15MouseClicked(evt);
+            }
+        });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bolosvanilda/Imagens/Produtos.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bolosvanilda/Imagens/Orçamentos.png"))); // NOI18N
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bolosvanilda/Imagens/Vendas.png"))); // NOI18N
 
@@ -179,6 +199,28 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        CadClientes frame = new CadClientes();
+        frame.setVisible(true);
+        
+    }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+        CadFornecedores frame = new CadFornecedores();
+        frame.setVisible(true);
+    }//GEN-LAST:event_jLabel15MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        CadProdutos frame = new CadProdutos();
+        frame.setVisible(true);
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        TelaOrçamentos frame = new TelaOrçamentos();
+        frame.setVisible(true);
+        
+    }//GEN-LAST:event_jLabel2MouseClicked
 
     /**
      * @param args the command line arguments

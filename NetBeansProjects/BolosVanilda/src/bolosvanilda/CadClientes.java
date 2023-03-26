@@ -152,6 +152,11 @@ public class CadClientes extends javax.swing.JFrame {
         jButton3.setText("Gravar");
 
         jButton4.setText("Cancelar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -329,6 +334,10 @@ public class CadClientes extends javax.swing.JFrame {
     private void TxtNomCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtNomCliActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtNomCliActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
