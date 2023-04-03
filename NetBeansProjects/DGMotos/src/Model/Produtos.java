@@ -1,11 +1,13 @@
 
 package Model;
 
+import java.util.Date;
+
 
 public class Produtos {
     
    private int id;
-   private String data_cadastro;
+   private Date data_cadastro;
    private String descricao;
    private int tipo;
    private int unidade;
@@ -29,11 +31,11 @@ public class Produtos {
         this.id = id;
     }
 
-    public String getData_cadastro() {
+    public Date getData_cadastro() {
         return data_cadastro;
     }
 
-    public void setData_cadastro(String data_cadastro) {
+    public void setData_cadastro(Date data_cadastro) {
         this.data_cadastro = data_cadastro;
     }
 

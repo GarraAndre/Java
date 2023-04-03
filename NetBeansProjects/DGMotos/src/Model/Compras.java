@@ -1,11 +1,13 @@
 
 package Model;
 
+import java.util.Date;
+
 
 public class Compras {
     private int entrada;
     private String nf;
-    private String data_compra;
+    private Date data_compra;
     private int fornecedor_id;
     private int produto_id;
     private int quantidade;
@@ -27,11 +29,11 @@ public class Compras {
         this.nf = nf;
     }
 
-    public String getData_compra() {
+    public Date getData_compra() {
         return data_compra;
     }
 
-    public void setData_compra(String data_compra) {
+    public void setData_compra(Date data_compra) {
         this.data_compra = data_compra;
     }
 

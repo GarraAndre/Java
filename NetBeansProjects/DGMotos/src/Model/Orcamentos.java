@@ -1,13 +1,15 @@
 
 package Model;
 
+import java.util.Date;
+
 public class Orcamentos {
     private int numero;
     private int cliente_id;
     private String moto;
     private String km;
     private String placa;
-    private String validade;
+    private Date validade;
     private int produto_id;
     private int quantidade;
     private double valor;
@@ -52,11 +54,11 @@ public class Orcamentos {
         this.placa = placa;
     }
 
-    public String getValidade() {
+    public Date getValidade() {
         return validade;
     }
 
-    public void setValidade(String validade) {
+    public void setValidade(Date validade) {
         this.validade = validade;
     }
 
