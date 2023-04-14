@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Clientes {
     private int id;
-    private Date data_cadastro;
+    private String data_cadastro;
     private String nome;
     private String cpf;
     private String rg;
@@ -32,11 +32,11 @@ public class Clientes {
         this.id = id;
     }
 
-    public Date getData_cadastro() {
+    public String getData_cadastro() {
         return data_cadastro;
     }
 
-    public void setData_cadastro(Date data_cadastro) {
+    public void setData_cadastro(String data_cadastro) {
         this.data_cadastro = data_cadastro;
     }
 

@@ -4,6 +4,10 @@
  */
 package bolosvanilda;
 
+import DAO.ClientesDAO;
+import Model.Clientes;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -155,6 +159,11 @@ public class CadClientes extends javax.swing.JFrame {
         jButton2.setText("Alterar");
 
         jButton3.setText("Gravar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Cancelar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -348,6 +357,43 @@ public class CadClientes extends javax.swing.JFrame {
         PesqClientes frame = new PesqClientes();
         frame.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        try {
+            Clientes obj = new Clientes();
+            
+            obj.setData_cadastro(TxtDatCli.getText());
+            obj.setNome(TxtNomCli.getText());
+            obj.setCpf(TxtCpfCli.getText());
+            obj.setRg(TxtRgCli.getText());
+            obj.setEndereco(TxtEndCli.getText());
+            obj.setNumero(TxtNumCli.getText());
+            obj.setBairro(TxtBaiCli.getText());
+            obj.setComplemento(TxtComCli.getText());
+            obj.setCidade(TxtCidCli.getText());
+            obj.setEstado(Integer.parseInt(CombCli.getItemAt(0)));
+            obj.setTelefone(TxtTelCli.getText());
+            obj.setCelular(TxtCelCli.getText());
+            obj.setEmail(TxtEmaCli.getText());
+            obj.setVeiculo(TxtMotCli.getText());
+            obj.setKm(TxtKmCli.getText());
+            obj.setObservacoes(TxtObsCli.getText());
+            
+            ClientesDAO dao = new ClientesDAO();
+            dao.cadastrarCliente(obj);
+            
+            JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso!");
+            
+        } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, "Erro ao cadastrar cliente" + e);
+        }
+            
+            
+            
+            
+            
+      
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
