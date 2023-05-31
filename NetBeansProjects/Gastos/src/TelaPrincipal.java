@@ -1,4 +1,7 @@
 
+import Classes.Frame;
+
+
 public class TelaPrincipal extends javax.swing.JFrame {
 
     
@@ -16,6 +19,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -46,6 +50,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Investimento.png"))); // NOI18N
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Posiçao.png"))); // NOI18N
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Dividas.png"))); // NOI18N
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Cadastro.png"))); // NOI18N
         jMenu1.setText("Cadastro");
@@ -93,6 +99,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Usuarios.png"))); // NOI18N
         jMenu3.setText("Usuários");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jMenu3);
 
         jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Sair.png"))); // NOI18N
@@ -106,9 +117,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(56, 56, 56)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
@@ -116,18 +127,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
-                .addContainerGap(486, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addContainerGap(372, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel1)
                     .addComponent(jLabel5)
                     .addComponent(jLabel4)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel2))
                 .addContainerGap(503, Short.MAX_VALUE))
         );
 
@@ -136,18 +150,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        Operador operador = new Operador();
-        operador.setVisible(true);
+       Operador opera = new Operador();
+       opera.setVisible(true);
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-       
+        CadCidades cidade = new CadCidades();
+        cidade.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem4MouseClicked
-        CadCidades cidade = new CadCidades();
-        cidade.setVisible(true);
+            Frame.aviso("Teste");
     }//GEN-LAST:event_jMenuItem4MouseClicked
+
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+        CadUsuarios usuario = new CadUsuarios();
+        usuario.setVisible(true);
+    }//GEN-LAST:event_jMenu3MouseClicked
 
     
     public static void main(String args[]) {
@@ -185,6 +204,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;

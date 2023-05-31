@@ -8,5 +8,8 @@ public class Frame {
     public static void aviso( String alerta){
         JOptionPane.showMessageDialog(null,alerta);
     }
+    public static void Teste(String painel){
+      
+    }
     
 }
