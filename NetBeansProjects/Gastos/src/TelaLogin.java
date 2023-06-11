@@ -29,6 +29,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
+        setResizable(false);
 
         lbUSUARIO.setText("Usúario:");
 
@@ -133,9 +134,8 @@ public class TelaLogin extends javax.swing.JFrame {
             
             TelaPrincipal Principal = new TelaPrincipal();
             Principal.setVisible(true);
+            this.dispose();
         
-    }if (( edUSUARIO.getText() != "") && (edSENHA.getText() != "")){
-        Frame.aviso("Digite usúario e senha");
         
     }else{
         Frame.aviso("Usuario e senha inválidos!");
