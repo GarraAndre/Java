@@ -1,10 +1,4 @@
-
 import Classes.Frame;
-
-
-
-
-
 
 public class TelaLogin extends javax.swing.JFrame {
 
