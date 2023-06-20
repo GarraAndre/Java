@@ -1,4 +1,8 @@
 
+import Classes.Frame;
+import java.awt.event.FocusEvent;
+
+
 public class CadRecebimentos extends javax.swing.JFrame {
 
     
@@ -92,6 +96,11 @@ public class CadRecebimentos extends javax.swing.JFrame {
         });
 
         jButton4.setText("Gravar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -227,6 +236,13 @@ public class CadRecebimentos extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        if ( edNOME.getText().isEmpty()) {
+            edNOME.requestFocus();
+            Frame.aviso("Campo Nome obrigatório, verifique");
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
 
    
     public static void main(String args[]) {

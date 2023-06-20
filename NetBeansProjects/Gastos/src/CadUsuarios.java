@@ -1,4 +1,7 @@
 
+import Classes.Frame;
+
+
 public class CadUsuarios extends javax.swing.JFrame {
 
   
@@ -31,6 +34,11 @@ public class CadUsuarios extends javax.swing.JFrame {
         btCANCELAR.setText("Cancelar");
 
         btCONFIRMAR.setText("Confirmar");
+        btCONFIRMAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCONFIRMARActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,6 +88,13 @@ public class CadUsuarios extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btCONFIRMARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCONFIRMARActionPerformed
+        if (edNOME.getText().isEmpty()){
+            edNOME.requestFocus();
+            Frame.aviso("Campo Nome obrigatório, verifique!");
+        }
+    }//GEN-LAST:event_btCONFIRMARActionPerformed
 
     
     public static void main(String args[]) {

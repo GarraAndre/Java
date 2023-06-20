@@ -1,4 +1,7 @@
 
+import Classes.Frame;
+
+
 public class CadDividas extends javax.swing.JFrame {
 
     
@@ -21,7 +24,7 @@ public class CadDividas extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tbCONTAS = new javax.swing.JTable();
         edCODIGO = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        edNOME = new javax.swing.JTextField();
         edCONTA = new javax.swing.JTextField();
         edBANCO = new javax.swing.JTextField();
         edTELE = new javax.swing.JTextField();
@@ -90,6 +93,11 @@ public class CadDividas extends javax.swing.JFrame {
         btCANCELAR.setText("Cancelar");
 
         btGRAVAR.setText("Gravar");
+        btGRAVAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btGRAVARActionPerformed(evt);
+            }
+        });
 
         btPESQUISAR.setText("Pesquisar");
 
@@ -133,7 +141,7 @@ public class CadDividas extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(edNOME, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(cbCHAVE, 0, 1, Short.MAX_VALUE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -175,7 +183,7 @@ public class CadDividas extends javax.swing.JFrame {
                     .addComponent(lbNOME)
                     .addComponent(lbPIX)
                     .addComponent(edPIX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(edNOME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbCHAVE)
@@ -210,9 +218,18 @@ public class CadDividas extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btGRAVARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGRAVARActionPerformed
+       if (edNOME.getText().isEmpty()) {
+           edNOME.requestFocus();
+           Frame.aviso("Campo Nome obrigatório, verifique!");
+       }
+       if (edPIX.getText().isEmpty()){
+           edPIX.requestFocus();
+           Frame.aviso("Chave PIX obrigatório, verifique!");
+       }
+    }//GEN-LAST:event_btGRAVARActionPerformed
+
+   
     public static void main(String args[]) {
        
         
@@ -252,12 +269,12 @@ public class CadDividas extends javax.swing.JFrame {
     private javax.swing.JTextField edCODIGO;
     private javax.swing.JTextField edCONTA;
     private javax.swing.JTextField edEMAIL;
+    private javax.swing.JTextField edNOME;
     private javax.swing.JTextPane edOBSERV;
     private javax.swing.JFormattedTextField edPIX;
     private javax.swing.JTextField edTELE;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel lbBANCO;
     private javax.swing.JLabel lbCHAVE;
     private javax.swing.JLabel lbCODIGO;
