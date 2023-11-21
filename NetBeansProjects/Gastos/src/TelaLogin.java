@@ -124,7 +124,7 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btCancelarActionPerformed
 
     private void btLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLoginActionPerformed
-        if (("André".equals(edUSUARIO.getText()))&& ("123".equals(edSENHA.getText()))){
+        if (("André".equals(edUSUARIO.getText()))&& ("123".equals(edSENHA.getPassword()))){
             
             TelaPrincipal Principal = new TelaPrincipal();
             Principal.setVisible(true);
