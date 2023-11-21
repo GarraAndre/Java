@@ -228,6 +228,11 @@ public class Clientes extends javax.swing.JFrame {
 
     private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
        
+        
+         if(nome.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "O campo nome não pode ser vazio");
+            }else{
+        
             try {
                 
                 ClientesModel obj = new ClientesModel();
@@ -268,7 +273,9 @@ public class Clientes extends javax.swing.JFrame {
             
           
         }
-            
+           
+         }
+        
             
 
          
