@@ -231,6 +231,8 @@ public class Clientes extends javax.swing.JFrame {
         
          if(nome.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "O campo nome não pode ser vazio");
+                nome.requestFocusInWindow();
+                nome.setBackground(Color.GRAY);
             }else{
         
             try {
